@@ -18,7 +18,7 @@
             {% block header %}
                 <header>
                     <img src="{{ asset('News/images/logo.png') }}" alt="logo-site" class="logo"><h1>Ward Leonard</h1>
-                    <nav>
+                    <nav id="nav">
                         <ul>
                             <li><a href="">Actualité</a></li>
                             <li><a href="">Le groupe</a></li>
@@ -26,7 +26,7 @@
                             <li><a href="">Contact</a></li>
                         </ul>
                     </nav>
-                    <i class="fa fa-bars" aria-hidden="true"><a href="#nav"></a></i>
+                    <a href="#nav"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 </header>
             {% endblock %}
 
