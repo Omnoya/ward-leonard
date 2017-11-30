@@ -1,0 +1,32 @@
+footer{
+	display: flex;
+	flex-direction: column;
+	li{
+		a{
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: 500px) {
+	footer{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 3rem;
+		padding-top: 1rem;
+		background-color: black;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		li{
+			list-style: none;
+			a{
+				color: white;
+			}
+		}
+	}
+}
+

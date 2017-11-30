@@ -7,8 +7,8 @@
 			<li>
 				<p>{{e.title}}
 					<i> Date de sortie: {{ e.dateSortie | date('Y')}}</i> -
-					<a href="{{ path('disk_edit') }}">Editer</a> -
-					<a href="{{ path('disk_delete') }}">Supprimer</a>
+					<a href="{{ path('disk_edit', {'id': e.id}) }}">Editer</a> -
+					<a href="{{ path('disk_delete', {'id': e.id}) }}">Supprimer</a>
 				</p>
 			</li>
 		{% endfor %}

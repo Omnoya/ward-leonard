@@ -1,9 +1,28 @@
 {% extends '::base.html.twig' %}
 
+{% form_theme form with 'WardLeonardDiscoBundle:Form:form_error.html.twig' %}
+
 {% block section %}
 
-	ici il faut un formulaire pour enregistrer un disque
 
-	{{ form(form) }}
+
+	{{ form_start(form) }}
+	<fieldset>
+		<legend>Saisir les informations du disque</legend>
+		<div>
+			{{ form_label(form.title) }}
+			{{ form_widget(form.title) }}{{ form_errors(form.title) }}
+		</div>
+		<div>
+			{{ form_label(form.dateSortie) }}
+            {{ form_widget(form.dateSortie) }}{{ form_errors(form.dateSortie) }}
+		</div>
+	</fieldset>
+	<fieldset class="action">
+		{{ form_row(form.submit) }}
+		{{ form_row(form.reset) }}
+	</fieldset>
+	{{ form_rest(form) }}
+	{{ form_end(form) }}
 
 {% endblock %}

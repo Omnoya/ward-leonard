@@ -1,4 +1,4 @@
-Ward Leoanrd WebSite
+Ward Leonard WebSite
 ====================
 
 [Ward Leonard](http://wardleonard.fr/) (ancienne version du site)

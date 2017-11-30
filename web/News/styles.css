@@ -94,6 +94,37 @@
 .articleNews small {
   font-size: 1rem; }
 
+form.form fieldset {
+  width: 50%;
+  margin: 0 auto; }
+  form.form fieldset.action {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+footer {
+  display: flex;
+  flex-direction: column; }
+  footer li a {
+    display: block;
+    text-align: center; }
+
+@media screen and (min-width: 500px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    footer li {
+      list-style: none; }
+      footer li a {
+        color: white; } }
 * {
   margin: 0;
   padding: 0; }
@@ -104,18 +135,19 @@ html {
   html body {
     position: relative;
     width: 100%; }
-    @media screen and (min-width: 1200px) {
-      html body {
-        width: 80%;
-        margin: 0 auto; } }
     @media screen and (min-width: 320px) {
       html body main {
-        padding-top: 10rem; } }
+        padding-top: 10rem;
+        padding-bottom: 10rem; } }
     @media screen and (min-width: 768px) {
       html body main {
-        padding-top: 12rem; } }
+        padding-top: 12rem;
+        padding-bottom: 12rem; } }
     @media screen and (min-width: 1200px) {
       html body main {
-        padding-top: 14rem; } }
+        padding-top: 14rem;
+        padding-bottom: 14rem;
+        width: 80%;
+        margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */

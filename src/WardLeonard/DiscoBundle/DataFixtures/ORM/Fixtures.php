@@ -24,7 +24,7 @@ class Fixtures extends Fixture
         $disk->setDateSortie(new \DateTime('2017'));
 
         $title = new Title();
-        $title->setTitle('Vouloir c\'est pouvoir');
+        $title->setDisk('Vouloir c\'est pouvoir');
 
         $lyric = new Lyric();
         $lyric->setTitle('Vouloir c\'est pouvoir');

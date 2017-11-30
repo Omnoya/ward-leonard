@@ -44,7 +44,11 @@ class DiskController extends Controller
     public function newAction(Request $request)
     {
         $disk = new Disk();
-        $form = $this->createForm('WardLeonard\DiscoBundle\Form\DiskType', $disk)
+        $form = $this->createForm('WardLeonard\DiscoBundle\Form\DiskType', $disk, array(
+            'attr' => array(
+                'class' => 'form'
+            )
+        ))
         ->add('submit', SubmitType::class, array(
                 'label' => 'form.disk.save'
             ))

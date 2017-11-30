@@ -24,7 +24,8 @@ class Lyric
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\OneToOne(targetEntity="WardLeonard\DiscoBundle\Entity\Title")
+     * @ORM\JoinColumn(name="title_id", referencedColumnName="id")
      */
     private $title;
 

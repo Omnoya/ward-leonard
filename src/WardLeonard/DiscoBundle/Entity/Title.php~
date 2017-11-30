@@ -25,16 +25,16 @@ class Title
      * @var string
      *
      * @ORM\ManyToOne(targetEntity="WardLeonard\DiscoBundle\Entity\Disk")
-     * @ORM\JoinColumn(name="disk_id", referencedColumnName="id", nullable=true)
+     * @ORM\JoinColumn(name="morceau_id", referencedColumnName="id")
      */
-    private $disk;
+    private $morceau;
 
     /**
      * @var
      *
-     * @ORM\Column(name="title",type="string",length=200)
+     * @ORM\Column(name="morceau_title",type="string",length=200)
      */
-    private $title;
+    private $morceautitle;
 
 
     /**
@@ -50,13 +50,13 @@ class Title
     /**
      * Set morceau
      *
-     * @param string $disk
+     * @param string $morceau
      *
      * @return Title
      */
-    public function setDisk($disk)
+    public function setMorceau($morceau)
     {
-        $this->disk = $disk;
+        $this->morceau = $morceau;
 
         return $this;
     }
@@ -66,32 +66,8 @@ class Title
      *
      * @return string
      */
-    public function getDisk()
+    public function getMorceau()
     {
-        return $this->disk;
-    }
-
-    /**
-     * Set morceautitle
-     *
-     * @param string $title
-     *
-     * @return Title
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * Get morceautitle
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->title;
+        return $this->morceau;
     }
 }

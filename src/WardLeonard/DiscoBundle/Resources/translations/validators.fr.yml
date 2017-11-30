@@ -1,0 +1,4 @@
+validator:
+    disk:
+        title:
+            regex: "Le titre comprend des caractères interdits."

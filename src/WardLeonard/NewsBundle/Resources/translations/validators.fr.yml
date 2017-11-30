@@ -2,3 +2,5 @@ validator:
   news:
     title:
       regex: "Seulement des caractères SVP !!!"
+    content:
+      notblank: "Le contenu ne peut pas être vide"

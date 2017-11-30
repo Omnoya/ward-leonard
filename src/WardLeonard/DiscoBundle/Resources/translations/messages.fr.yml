@@ -5,6 +5,6 @@ form:
             placeholder: "Saisir un titre"
         date:
             label: "Année de sortie"
-            placeholder: "saisir une année de sortie"
+            placeholder: "Saisir une année de sortie"
         save: "Enregistrer"
         reset: "Effacer"

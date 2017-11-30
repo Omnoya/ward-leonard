@@ -36,3 +36,29 @@
     {% endfor %}
 
 {% endblock %}
+
+{% block javascripts %}
+
+{{ parent() }}
+
+<script>
+    window.addEventListener('load', function(){
+
+        let links;
+        links = document.querySelectorAll('.btn-danger');
+
+        for (let e of links){
+            e.addEventListener('click',(event)=>{
+                if (confirm('Etes-vous sûr de vouloir supprimer cette actualités?')) {
+                    return true;
+                }
+                event.preventDefault();
+            });
+        }
+
+
+
+    })
+</script>
+
+{%  endblock %}

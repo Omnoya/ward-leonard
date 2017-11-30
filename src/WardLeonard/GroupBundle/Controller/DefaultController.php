@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/group")
+     * @Route("/group", name="group_index")
      */
     public function indexAction()
     {

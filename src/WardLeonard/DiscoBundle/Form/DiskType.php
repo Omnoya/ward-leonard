@@ -24,7 +24,7 @@ class DiskType extends AbstractType
                 'placeholder' => 'form.disk.title.placeholder'
         )))->add('dateSortie', DateType::class, array(
             'label' => 'form.disk.date.label',
-            'trim' => true,
+            'widget' => 'single_text',
             'attr' => array(
                 'class' => 'input',
                 'placeholder' => 'form.disk.date.placeholder'

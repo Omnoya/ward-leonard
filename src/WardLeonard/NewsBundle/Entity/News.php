@@ -39,6 +39,9 @@ class News
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     * @Assert\NotBlank(
+     *     message="validator.news.content.notblank"
+     * )
      */
     private $content;
 

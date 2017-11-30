@@ -26,6 +26,7 @@ class Disk
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     *
      * @Assert\Regex(
      *     pattern="/^[a-z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœ\s]*$/i",
      *     message="validator.disk.title.regex"
@@ -34,9 +35,17 @@ class Disk
     private $title;
 
     /**
+     * @var int
+     *
+     * @ORM\OneToMany(targetEntity="WardLeonard\DiscoBundle\Entity\Title", mappedBy="morceau")
+     * @ORM\JoinColumn(name="morceau_id", referencedColumnName="id")
+     */
+    private $morceau;
+
+    /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_sortie", type="datetime")
+     * @ORM\Column(name="dateSortie", type="datetime")
      */
     private $dateSortie;
 
