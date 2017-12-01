@@ -34,7 +34,7 @@ class LyricController extends Controller
     /**
      * Creates a new lyric entity.
      *
-     * @Route("lyric/new", name="lyric_new")
+     * @Route("/lyric/new", name="lyric_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +60,7 @@ class LyricController extends Controller
     /**
      * Finds and displays a lyric entity.
      *
-     * @Route("lyric/show/{id}", name="lyric_show")
+     * @Route("/lyric/show/{id}", name="lyric_show")
      * @Method("GET")
      */
     public function showAction(Lyric $lyric)
@@ -76,7 +76,7 @@ class LyricController extends Controller
     /**
      * Displays a form to edit an existing lyric entity.
      *
-     * @Route("lyric/edit/{id}", name="lyric_edit")
+     * @Route("/lyric/edit/{id}", name="lyric_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Lyric $lyric)

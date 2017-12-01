@@ -8,3 +8,8 @@ form:
             placeholder: "Saisir une année de sortie"
         save: "Enregistrer"
         reset: "Effacer"
+    lyric:
+        title:
+            label: "Titre"
+        content:
+            label: "Paroles"

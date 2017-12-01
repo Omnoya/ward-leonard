@@ -16,7 +16,7 @@
         {% for lyric in lyrics %}
             <tr>
                 <td><a href="{{ path('lyric_show', { 'id': lyric.id }) }}">{{ lyric.id }}</a></td>
-                <td>{{ lyric.title }}</td>
+                <td>{{ lyric.title.title }}</td>
                 <td>{{ lyric.content }}</td>
                 <td>
                     <ul>

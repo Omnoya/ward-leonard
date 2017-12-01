@@ -22,12 +22,21 @@ class Fixtures extends Fixture
         $disk = new Disk();
         $disk->setTitle('Western');
         $disk->setDateSortie(new \DateTime('2017'));
+        $manager->persist($disk);
+        $manager->flush();
+
+        $disk = $manager->getRepository('WardLeonardDiscoBundle:Disk')->findOneByTitle('Western');
 
         $title = new Title();
-        $title->setDisk('Vouloir c\'est pouvoir');
+        $title->setTitle("Vouloir c'est pouvoir");
+        $title->setDisk($disk);
+        $manager->persist($title);
+        $manager->flush();
+
+        $title = $manager->getRepository('WardLeonardDiscoBundle:Title')->findOneByTitle("Vouloir c'est pouvoir");
 
         $lyric = new Lyric();
-        $lyric->setTitle('Vouloir c\'est pouvoir');
+        $lyric->setTitle($title);
         $lyric->setContent('
                 Tout ceux qui me disent que vouloir c\'est pouvoir<br>
                 me font bien rigoler avec leurs histoires<br>
@@ -70,10 +79,6 @@ class Fixtures extends Fixture
                 Le point sur le i la barre sur le t, il n\'y a pas dégalité<br>
             ');
 
-
-        
-        $manager->persist($disk);
-        $manager->persist($title);
         $manager->persist($lyric);
         $manager->flush();
 

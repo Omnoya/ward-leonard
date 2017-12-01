@@ -22,7 +22,7 @@ class Lyric
     private $id;
 
     /**
-     * @var string
+     * @var int
      *
      * @ORM\OneToOne(targetEntity="WardLeonard\DiscoBundle\Entity\Title")
      * @ORM\JoinColumn(name="title_id", referencedColumnName="id")

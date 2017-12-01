@@ -26,3 +26,6 @@ ward_leonard_news:
     type:     annotation
     prefix:   /
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

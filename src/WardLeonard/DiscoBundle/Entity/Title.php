@@ -22,7 +22,7 @@ class Title
     private $id;
 
     /**
-     * @var string
+     * @var int
      *
      * @ORM\ManyToOne(targetEntity="WardLeonard\DiscoBundle\Entity\Disk")
      * @ORM\JoinColumn(name="disk_id", referencedColumnName="id", nullable=true)
