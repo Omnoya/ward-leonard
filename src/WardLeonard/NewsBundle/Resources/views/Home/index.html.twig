@@ -5,8 +5,15 @@
             <h2>
                 {{ new.title }}
             </h2>
-            <p class="contentNews">{{ new.content | raw }}<img src="{{ asset('News/images/'~ new.photo)  }}" alt=""></p>
+            <p class="contentNews">
+                {{ new.content | raw }}
+                {% if (new.photo) %}
+                <img src="{{ asset('News/images/'~ new.photo)  }}" alt="{{ new.photo }}">
+                {% endif %}
+            </p>
+            {% if new.video != null %}
             <iframe class="video" width="60%" height="auto" src="https://www.youtube.com/embed/{{ new.video }}"></iframe>
+            {% endif %}
             <p><small>{{ new.datepublication |  date('d/m/Y')}}</small></p>
         </article>
     {% endfor %}
